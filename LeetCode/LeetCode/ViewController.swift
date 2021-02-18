@@ -17,7 +17,8 @@ class ViewController: UIViewController {
         self.view.backgroundColor = .orange
         
 //        self.testLeetCode66()
-        self.testLeetCode67()
+//        self.testLeetCode67()
+        self.testLeetCode69()
     }
 
 
@@ -38,5 +39,15 @@ class ViewController: UIViewController {
         
         print(resultStr)
     }
+    
+    
+    func testLeetCode69(){
+        let x = 19
+        
+        let res = LeetCode69_Sqrt().mySqrt(x)
+        
+        print(res)
+    }
+    
 }
 

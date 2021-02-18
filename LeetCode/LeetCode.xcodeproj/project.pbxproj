@@ -13,6 +13,7 @@
 		A04702B225D3B13100EF30C8 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = A04702B025D3B13100EF30C8 /* LaunchScreen.storyboard */; };
 		A04702BB25D3B38400EF30C8 /* LeetCode66_AddOne.swift in Sources */ = {isa = PBXBuildFile; fileRef = A04702BA25D3B38400EF30C8 /* LeetCode66_AddOne.swift */; };
 		A04702BD25D3B7B500EF30C8 /* LeetCode67_BinaryAdd.swift in Sources */ = {isa = PBXBuildFile; fileRef = A04702BC25D3B7B500EF30C8 /* LeetCode67_BinaryAdd.swift */; };
+		A08C759925DE7931004704DF /* LeetCode69_Sqrt.swift in Sources */ = {isa = PBXBuildFile; fileRef = A08C759825DE7931004704DF /* LeetCode69_Sqrt.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -24,6 +25,7 @@
 		A04702B325D3B13100EF30C8 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		A04702BA25D3B38400EF30C8 /* LeetCode66_AddOne.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LeetCode66_AddOne.swift; sourceTree = "<group>"; };
 		A04702BC25D3B7B500EF30C8 /* LeetCode67_BinaryAdd.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LeetCode67_BinaryAdd.swift; sourceTree = "<group>"; };
+		A08C759825DE7931004704DF /* LeetCode69_Sqrt.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LeetCode69_Sqrt.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -71,6 +73,7 @@
 			children = (
 				A04702BA25D3B38400EF30C8 /* LeetCode66_AddOne.swift */,
 				A04702BC25D3B7B500EF30C8 /* LeetCode67_BinaryAdd.swift */,
+				A08C759825DE7931004704DF /* LeetCode69_Sqrt.swift */,
 			);
 			path = LeetCodeQuestions;
 			sourceTree = "<group>";
@@ -150,6 +153,7 @@
 				A04702AA25D3B12D00EF30C8 /* ViewController.swift in Sources */,
 				A04702BB25D3B38400EF30C8 /* LeetCode66_AddOne.swift in Sources */,
 				A04702A625D3B12D00EF30C8 /* AppDelegate.swift in Sources */,
+				A08C759925DE7931004704DF /* LeetCode69_Sqrt.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
