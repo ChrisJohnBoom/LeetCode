@@ -19,6 +19,7 @@ class ViewController: UIViewController {
 //        self.testLeetCode66()
 //        self.testLeetCode67()
         self.testLeetCode69()
+        self.testLeetCode88()
     }
 
 
@@ -49,5 +50,14 @@ class ViewController: UIViewController {
         print(res)
     }
     
+    func testLeetCode88(){
+        //输入：nums1 = [1,2,3,0,0,0], m = 3, nums2 = [2,5,6], n = 3
+
+        var nums1 = [2,0]
+        let nums2 = [1]
+        LeetCode88().merge(&nums1, 1, nums2, 1)
+        
+        print(nums1)
+    }
 }
 
