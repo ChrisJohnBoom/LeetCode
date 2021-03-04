@@ -20,6 +20,7 @@ class ViewController: UIViewController {
 //        self.testLeetCode67()
         self.testLeetCode69()
         self.testLeetCode88()
+        self.testLeetCode354()
     }
 
 
@@ -51,13 +52,30 @@ class ViewController: UIViewController {
     }
     
     func testLeetCode88(){
-        //输入：nums1 = [1,2,3,0,0,0], m = 3, nums2 = [2,5,6], n = 3
-
-        var nums1 = [2,0]
-        let nums2 = [1]
-        LeetCode88().merge(&nums1, 1, nums2, 1)
+        /*
+         [-1,0,0,3,3,3,0,0,0]
+         6
+         [1,2,2]
+         3
+         */
+       var nums1 = [-1,0,0,3,3,3,0,0,0]
+        let m = 6
+        let nums2 = [1,2,2]
+        let n = 3
+//        var nums1 = [1,0]
+//        let nums2 = [2]
+        LeetCode88().merge(&nums1, m, nums2, n)
         
         print(nums1)
     }
+    
+       func testLeetCode354(){
+            let envlops:[[Int]] = [[19,17],[8,14],[11,4],[12,20],[19,13],[3,12],[5,12],[19,9],[20,3],[11,19],[20,20],[7,14],[9,13],[2,8],[20,7],[16,6],[16,3],[10,2],[4,6],[3,17]]
+//            let envlops:[[Int]] = [[1,1],[1,1],[1,1]]
+            let res = LeetCodeQos354().maxEnvelopes(envlops)
+            
+            print("")
+        }
+    
 }
 

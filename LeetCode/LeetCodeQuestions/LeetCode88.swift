@@ -50,29 +50,21 @@ class LeetCode88: NSObject {
             
             while index < n {
                 let num = nums2[index]
+                print("num \(num)")
                 //取一个数据出来插入对应的nums1中
                 var insertFlag:Bool = false
-                
-                for i in 0 ..< nums1Cnt - 1 {
+                for i in 0 ..< nums1.count {
                     let numA = nums1[i]
-                    let numA1 = nums1[i + 1]
                     
-                    if(num >= numA && num < numA1){
+                    if(num <= numA || i >= nums1Cnt){
+                        //插在前面
+                        nums1.insert(num, at: i)
                         nums1Cnt += 1
-                        nums1.insert(num, at: i)
-                        index += 1
-                        insertFlag = true
                         break
-                    }else if(num < numA){
-                        nums1.insert(num, at: i)
                     }
                 }
                 
-                if(!insertFlag){
-                    nums1.insert(num, at: nums1Cnt)
-                    nums1Cnt += 1
-                    index += 1
-                }
+                index += 1
             }
         }
         
