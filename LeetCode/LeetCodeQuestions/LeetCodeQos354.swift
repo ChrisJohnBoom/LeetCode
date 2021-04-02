@@ -33,7 +33,60 @@ class LeetCodeQos354: NSObject {
     /*
      从大往小套
      */
+    
     func maxEnvelopes(_ envelopes: [[Int]]) -> Int {
+        var result = 0
+        var enlopsCpy = envelopes
+        
+        if(envelopes.count <= 1){
+            return envelopes.count
+        }
+        
+        enlopsCpy.sort { (arr1, arr2) -> Bool in
+            let firstA:Int = arr1.first ?? 0
+            let firstB:Int = arr2.first ?? 0
+            
+            return firstA < firstB
+        }
+        
+//        var nodeIndex:Int = 0
+        var cmpIndex:Int = 1
+        
+        var jumpArr:[[Int]] = [[Int]]()
+        
+//        while nodeIndex < enlopsCpy.count {
+            //分别计算个最小值为根节点的内容
+            var nodeArr = enlopsCpy[0]
+            
+            while cmpIndex < enlopsCpy.count {
+//                if(nodeIndex == cmpIndex){
+//                    continue
+//                }
+                let cmpArr = enlopsCpy[cmpIndex]
+                
+//                if(cmpArr == nodeArr){
+//                    continue
+//                }
+                
+                if(compareArrs(nodeArr, cmpArr)){
+                    nodeArr = cmpArr
+                    result += 1
+                }else{
+                    jumpArr.append(cmpArr)
+                }
+                
+                cmpIndex += 1
+            }
+            
+            
+//            nodeIndex += 1
+//        }
+        
+        return result
+    }
+    
+    
+    func maxEnvelopes1(_ envelopes: [[Int]]) -> Int {
         var result = 0
         
         var enlopsCpy = envelopes
@@ -49,61 +102,97 @@ class LeetCodeQos354: NSObject {
             return firstA < firstB
         }
         
-        var tempENArr = [[Int]]()
-
-        var enAIndex = 0
-        
-        var enAF = 0
-        var enAL = 0
-
-        while enAIndex < enlopsCpy.count {
-            let envelopArr = enlopsCpy[enAIndex]
-            let enBF:Int = envelopArr.first ?? 0
-            let enBL:Int = envelopArr.last ?? 0
-
-            //判断i能套多少个？
-            if(tempENArr.count == 0){
-                enAF = enBF
-                enAL = enBL
-                            
-                tempENArr.append(envelopArr)
-                enlopsCpy.remove(at: enAIndex)
-            }else{
-                if(enAF < enBF && enAL < enBL){
-                    //可以套娃
-                    enAF = enBF
-                    enAL = enBL
-                    tempENArr.append(envelopArr)
-                    enlopsCpy.remove(at: enAIndex)
-                    
-                    result = tempENArr.count > result ? tempENArr.count : result
-                }else{
-                    //不可以套娃
-                    //树需要分枝条了
-                    //减去最后一个节点 然后重新获取最大个数比较？
-                    //删减到当前节点可套娃的地方
-                    
-                    var tempENArrC:[[Int]] = [[Int]]()
-                    tempENArrC.append(contentsOf: tempENArr)
-                    tempENArrC.removeLast()
-                    tempENArrC.append(envelopArr)
-                    enlopsCpy.remove(at: enAIndex)
-                    tempENArrC.append(contentsOf: enlopsCpy)
-                    
-                    if(tempENArrC.count > result){
-                        let tempResult = maxEnvelopes(tempENArrC)//判断另外一个分之
-                        
-                        print("分树枝 \(tempENArrC) result \(tempResult)")
-
-                        result = tempResult > result ? tempResult : result
-                    }
-                }
-            }
-        }
-        
-        return result
+        return myEnvlops(enlopsCpy)
     }
     
     
+    func myEnvlops(_ envelopes:[[Int]])->Int{
+            var result = 0
+            
+            var enlopsCpy = envelopes
+            
+            if(envelopes.count <= 1){
+                return envelopes.count
+            }
+            
+            var tempENArr = [[Int]]()
+            
+            var targetArr:[Int] = [Int]()
+
+            while enlopsCpy.count != 0 {
+                let envelopArr = enlopsCpy[0]
+                let enBF:Int = envelopArr.first ?? 0
+                let enBL:Int = envelopArr.last ?? 0
+
+                //判断i能套多少个？
+                if(tempENArr.count == 0){
+                    targetArr = envelopArr
+                                
+                    tempENArr.append(envelopArr)
+                    enlopsCpy.remove(at: 0)
+                }else{
+                    if(compareArrs(targetArr, envelopArr)){
+                        //可以套娃
+                        targetArr = envelopArr
+                        
+                        tempENArr.append(envelopArr)
+                        //新的加一个节点 旧的原数组减少一个节点
+                        enlopsCpy.remove(at: 0)
+                        
+                        result = tempENArr.count > result ? tempENArr.count : result
+                    }else{
+                        //不可以套娃
+                        //树需要分枝条了
+                        //减去最后一个节点 然后重新获取最大个数比较？
+                        //删减到当前节点可套娃的地方
+                        
+                        var tempENArrC:[[Int]] = [[Int]]()
+                        tempENArrC.append(contentsOf: tempENArr)
+                        tempENArrC.removeLast()
+                        
+                        var removeIndex = tempENArrC.count - 1
+                        while removeIndex > 0 {
+                            let removeArr = tempENArrC[removeIndex]
+//                            envelopArr当前节点
+                            if(compareArrs(removeArr, envelopArr)){
+                                //前面的不可以套当前节点
+                                break
+                            }
+                           
+                            tempENArrC.remove(at: removeIndex)
+                            removeIndex -= 1
+                        }
+                        
+                        tempENArrC.append(envelopArr)
+                        enlopsCpy.remove(at: 0)
+                        tempENArrC.append(contentsOf: enlopsCpy)
+                        
+                        if(tempENArrC.count > result){
+                            let tempResult = myEnvlops(tempENArrC)//判断另外一个分之
+                            
+                            print("分树枝 \(tempENArrC) result \(tempResult)")
+
+                            result = tempResult > result ? tempResult : result
+                        }
+                    }
+                }
+            }
+            
+            return result
+    }
     
+    
+    func compareArrs(_ arrA:[Int],_ arrB:[Int]) -> Bool {
+        let enAF:Int = arrA.first ?? 0
+        let enAL:Int = arrA.last ?? 0
+
+        let enBF:Int = arrB.first ?? 0
+        let enBL:Int = arrB.last ?? 0
+
+        if(enAF < enBF && enAL < enBL){
+            return true
+        }
+        
+        return false
+    }
 }

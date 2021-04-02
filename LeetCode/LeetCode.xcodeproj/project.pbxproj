@@ -7,21 +7,34 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		A0084F4525F4C07F00959682 /* LeetCode101.swift in Sources */ = {isa = PBXBuildFile; fileRef = A0084F4425F4C07F00959682 /* LeetCode101.swift */; };
 		A00A5B9825EE592D00EE51BB /* LeetCode25.swift in Sources */ = {isa = PBXBuildFile; fileRef = A00A5B9725EE592D00EE51BB /* LeetCode25.swift */; };
+		A020AEBB260839CE006D2130 /* LeetCode3.swift in Sources */ = {isa = PBXBuildFile; fileRef = A020AEBA260839CE006D2130 /* LeetCode3.swift */; };
+		A042C5392602F4330013664E /* LeetCode92.swift in Sources */ = {isa = PBXBuildFile; fileRef = A042C5382602F4330013664E /* LeetCode92.swift */; };
+		A042C53B260359920013664E /* LeetCode5.swift in Sources */ = {isa = PBXBuildFile; fileRef = A042C53A260359920013664E /* LeetCode5.swift */; };
 		A04702A625D3B12D00EF30C8 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = A04702A525D3B12D00EF30C8 /* AppDelegate.swift */; };
 		A04702AA25D3B12D00EF30C8 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = A04702A925D3B12D00EF30C8 /* ViewController.swift */; };
 		A04702AF25D3B13100EF30C8 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = A04702AE25D3B13100EF30C8 /* Assets.xcassets */; };
 		A04702B225D3B13100EF30C8 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = A04702B025D3B13100EF30C8 /* LaunchScreen.storyboard */; };
 		A04702BB25D3B38400EF30C8 /* LeetCode66_AddOne.swift in Sources */ = {isa = PBXBuildFile; fileRef = A04702BA25D3B38400EF30C8 /* LeetCode66_AddOne.swift */; };
 		A04702BD25D3B7B500EF30C8 /* LeetCode67_BinaryAdd.swift in Sources */ = {isa = PBXBuildFile; fileRef = A04702BC25D3B7B500EF30C8 /* LeetCode67_BinaryAdd.swift */; };
+		A06B1E2F25F28605005C5AA8 /* LeetCode1.swift in Sources */ = {isa = PBXBuildFile; fileRef = A06B1E2E25F28605005C5AA8 /* LeetCode1.swift */; };
 		A08C759925DE7931004704DF /* LeetCode69_Sqrt.swift in Sources */ = {isa = PBXBuildFile; fileRef = A08C759825DE7931004704DF /* LeetCode69_Sqrt.swift */; };
+		A094792626043597003DA942 /* ParkingSystem.swift in Sources */ = {isa = PBXBuildFile; fileRef = A094792526043597003DA942 /* ParkingSystem.swift */; };
+		A0947928260594C8003DA942 /* LeetCode150.swift in Sources */ = {isa = PBXBuildFile; fileRef = A0947927260594C8003DA942 /* LeetCode150.swift */; };
+		A0BA57A725FDDBD800B2F20B /* LeetCode003.swift in Sources */ = {isa = PBXBuildFile; fileRef = A0BA57A625FDDBD800B2F20B /* LeetCode003.swift */; };
+		A0BA57A925FE5F8300B2F20B /* LeetCode121.swift in Sources */ = {isa = PBXBuildFile; fileRef = A0BA57A825FE5F8300B2F20B /* LeetCode121.swift */; };
 		A0CE1BD525F12D31002FE08F /* LeetCodeQos354.swift in Sources */ = {isa = PBXBuildFile; fileRef = A0CE1BD425F12D31002FE08F /* LeetCodeQos354.swift */; };
 		E6A469F825EFA840003D997D /* LeetCode88.swift in Sources */ = {isa = PBXBuildFile; fileRef = E6A469F725EFA840003D997D /* LeetCode88.swift */; };
 		E6B4A8AA25E6025E00E9512C /* LeetCode70_ClimbSteps.swift in Sources */ = {isa = PBXBuildFile; fileRef = E6B4A8A925E6025E00E9512C /* LeetCode70_ClimbSteps.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		A0084F4425F4C07F00959682 /* LeetCode101.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LeetCode101.swift; sourceTree = "<group>"; };
 		A00A5B9725EE592D00EE51BB /* LeetCode25.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LeetCode25.swift; sourceTree = "<group>"; };
+		A020AEBA260839CE006D2130 /* LeetCode3.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LeetCode3.swift; sourceTree = "<group>"; };
+		A042C5382602F4330013664E /* LeetCode92.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LeetCode92.swift; sourceTree = "<group>"; };
+		A042C53A260359920013664E /* LeetCode5.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LeetCode5.swift; sourceTree = "<group>"; };
 		A04702A225D3B12D00EF30C8 /* LeetCode.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = LeetCode.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		A04702A525D3B12D00EF30C8 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		A04702A925D3B12D00EF30C8 /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
@@ -30,7 +43,12 @@
 		A04702B325D3B13100EF30C8 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		A04702BA25D3B38400EF30C8 /* LeetCode66_AddOne.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LeetCode66_AddOne.swift; sourceTree = "<group>"; };
 		A04702BC25D3B7B500EF30C8 /* LeetCode67_BinaryAdd.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LeetCode67_BinaryAdd.swift; sourceTree = "<group>"; };
+		A06B1E2E25F28605005C5AA8 /* LeetCode1.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LeetCode1.swift; sourceTree = "<group>"; };
 		A08C759825DE7931004704DF /* LeetCode69_Sqrt.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LeetCode69_Sqrt.swift; sourceTree = "<group>"; };
+		A094792526043597003DA942 /* ParkingSystem.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ParkingSystem.swift; sourceTree = "<group>"; };
+		A0947927260594C8003DA942 /* LeetCode150.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LeetCode150.swift; sourceTree = "<group>"; };
+		A0BA57A625FDDBD800B2F20B /* LeetCode003.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LeetCode003.swift; sourceTree = "<group>"; };
+		A0BA57A825FE5F8300B2F20B /* LeetCode121.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LeetCode121.swift; sourceTree = "<group>"; };
 		A0CE1BD425F12D31002FE08F /* LeetCodeQos354.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LeetCodeQos354.swift; sourceTree = "<group>"; };
 		E6A469F725EFA840003D997D /* LeetCode88.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LeetCode88.swift; sourceTree = "<group>"; };
 		E6B4A8A925E6025E00E9512C /* LeetCode70_ClimbSteps.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LeetCode70_ClimbSteps.swift; sourceTree = "<group>"; };
@@ -79,6 +97,7 @@
 		A04702B925D3B2D200EF30C8 /* LeetCodeQuestions */ = {
 			isa = PBXGroup;
 			children = (
+				A042C5382602F4330013664E /* LeetCode92.swift */,
 				A04702BA25D3B38400EF30C8 /* LeetCode66_AddOne.swift */,
 				A04702BC25D3B7B500EF30C8 /* LeetCode67_BinaryAdd.swift */,
 				A08C759825DE7931004704DF /* LeetCode69_Sqrt.swift */,
@@ -86,6 +105,14 @@
 				E6B4A8A925E6025E00E9512C /* LeetCode70_ClimbSteps.swift */,
 				E6A469F725EFA840003D997D /* LeetCode88.swift */,
 				A0CE1BD425F12D31002FE08F /* LeetCodeQos354.swift */,
+				A06B1E2E25F28605005C5AA8 /* LeetCode1.swift */,
+				A0084F4425F4C07F00959682 /* LeetCode101.swift */,
+				A0BA57A625FDDBD800B2F20B /* LeetCode003.swift */,
+				A0BA57A825FE5F8300B2F20B /* LeetCode121.swift */,
+				A042C53A260359920013664E /* LeetCode5.swift */,
+				A094792526043597003DA942 /* ParkingSystem.swift */,
+				A0947927260594C8003DA942 /* LeetCode150.swift */,
+				A020AEBA260839CE006D2130 /* LeetCode3.swift */,
 			);
 			path = LeetCodeQuestions;
 			sourceTree = "<group>";
@@ -162,14 +189,23 @@
 			buildActionMask = 2147483647;
 			files = (
 				A04702BD25D3B7B500EF30C8 /* LeetCode67_BinaryAdd.swift in Sources */,
+				A0084F4525F4C07F00959682 /* LeetCode101.swift in Sources */,
 				A00A5B9825EE592D00EE51BB /* LeetCode25.swift in Sources */,
+				A0BA57A925FE5F8300B2F20B /* LeetCode121.swift in Sources */,
 				A04702AA25D3B12D00EF30C8 /* ViewController.swift in Sources */,
+				A0BA57A725FDDBD800B2F20B /* LeetCode003.swift in Sources */,
+				A042C53B260359920013664E /* LeetCode5.swift in Sources */,
 				A04702BB25D3B38400EF30C8 /* LeetCode66_AddOne.swift in Sources */,
+				A06B1E2F25F28605005C5AA8 /* LeetCode1.swift in Sources */,
 				A04702A625D3B12D00EF30C8 /* AppDelegate.swift in Sources */,
 				E6A469F825EFA840003D997D /* LeetCode88.swift in Sources */,
 				A0CE1BD525F12D31002FE08F /* LeetCodeQos354.swift in Sources */,
 				A08C759925DE7931004704DF /* LeetCode69_Sqrt.swift in Sources */,
+				A0947928260594C8003DA942 /* LeetCode150.swift in Sources */,
 				E6B4A8AA25E6025E00E9512C /* LeetCode70_ClimbSteps.swift in Sources */,
+				A042C5392602F4330013664E /* LeetCode92.swift in Sources */,
+				A020AEBB260839CE006D2130 /* LeetCode3.swift in Sources */,
+				A094792626043597003DA942 /* ParkingSystem.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
